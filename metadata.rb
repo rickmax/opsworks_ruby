@@ -10,14 +10,14 @@ version '1.7.0'
 chef_version '~> 12.0' if respond_to?(:chef_version)
 
 depends 'deployer'
+depends 'nodejs'
 depends 'chef_nginx'
+depends 'puma'
 depends 'logrotate'
 depends 'ruby-ng'
 depends 'elasticsearch', '>= 2.0.0'
 depends 'redis'
 depends 'sidekiq'
-depends 'puma'
-depends 'nodejs'
 
 supports 'amazon', '>= 2017.03'
 supports 'ubuntu', '>= 16.04'
