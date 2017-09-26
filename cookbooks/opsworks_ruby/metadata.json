@@ -17,7 +17,8 @@
     "elasticsearch": ">= 2.0.0",
     "redis": ">= 0.0.0",
     "sidekiq": ">= 0.0.0",
-    "puma": ">= 0.0.0"
+    "puma": ">= 0.0.0",
+    "nodejs": ">= 0.0.0"
   },
   "recommendations": {
   },

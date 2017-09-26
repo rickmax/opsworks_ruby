@@ -17,6 +17,7 @@ depends 'elasticsearch', '>= 2.0.0'
 depends 'redis'
 depends 'sidekiq'
 depends 'puma'
+depends 'nodejs'
 
 supports 'amazon', '>= 2017.03'
 supports 'ubuntu', '>= 16.04'
