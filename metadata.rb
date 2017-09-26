@@ -13,9 +13,10 @@ depends 'deployer'
 depends 'chef_nginx'
 depends 'logrotate'
 depends 'ruby-ng'
+depends 'elasticsearch', '>= 2.0.0'
+depends 'redis'
+depends 'sidekiq'
+depends 'puma'
 
 supports 'amazon', '>= 2017.03'
 supports 'ubuntu', '>= 16.04'
-
-source_url 'https://github.com/ajgon/opsworks_ruby'
-issues_url 'https://github.com/ajgon/opsworks_ruby/issues'
