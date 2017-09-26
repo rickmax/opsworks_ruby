@@ -21,8 +21,8 @@ if node['platform_family'] == 'debian'
 end
 
 # Ruby and bundler
-include_recipe "nodejs::default"
 include_recipe 'deployer'
+include_recipe 'nodejs'
 
 if node['platform_family'] == 'debian'
   include_recipe 'ruby-ng::dev'
