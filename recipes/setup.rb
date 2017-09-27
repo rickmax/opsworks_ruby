@@ -22,7 +22,9 @@ end
 
 # Ruby and bundler
 include_recipe 'deployer'
+include_recipe 'node'
 include_recipe 'nodejs'
+include_recipe 'redis'
 
 if node['platform_family'] == 'debian'
   include_recipe 'ruby-ng::dev'
