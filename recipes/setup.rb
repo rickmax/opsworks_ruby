@@ -7,6 +7,12 @@
 
 prepare_recipe
 
+include_recipe 'node'
+include_recipe 'nodejs'
+include_recipe 'redis'
+include_recipe 'elasticsearch'
+include_recipe 'sidekick'
+
 # Monit and cleanup
 if node['platform_family'] == 'debian'
   execute 'mkdir -p /etc/monit/conf.d'
@@ -21,9 +27,6 @@ if node['platform_family'] == 'debian'
 end
 
 # Ruby and bundler
-include_recipe 'node'
-include_recipe 'nodejs'
-include_recipe 'redis::install_from_package'
 include_recipe 'deployer'
 
 if node['platform_family'] == 'debian'
