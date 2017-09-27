@@ -23,7 +23,7 @@ end
 # Ruby and bundler
 include_recipe 'node'
 include_recipe 'nodejs'
-include_recipe 'redis'
+include_recipe 'redis::install_from_package'
 include_recipe 'deployer'
 
 if node['platform_family'] == 'debian'
