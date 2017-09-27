@@ -10,6 +10,7 @@ version '1.7.0'
 chef_version '~> 12.0' if respond_to?(:chef_version)
 
 depends 'deployer'
+depends 'node'
 depends 'nodejs'
 depends 'chef_nginx'
 depends 'puma'
