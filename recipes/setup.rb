@@ -7,11 +7,10 @@
 
 prepare_recipe
 
-include_recipe 'node'
-include_recipe 'nodejs'
-include_recipe 'redis'
-include_recipe 'elasticsearch'
-include_recipe 'sidekick'
+include_recipe 'node::default'
+include_recipe 'redis::default'
+include_recipe 'elasticsearch::default'
+include_recipe 'sidekiq::default'
 
 # Monit and cleanup
 if node['platform_family'] == 'debian'
