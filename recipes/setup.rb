@@ -20,7 +20,6 @@ if node['platform_family'] == 'debian'
   end
 end
 
-include_recipe 'node::default'
 include_recipe 'nodejs::default'
 include_recipe 'runit'
 include_recipe 'runit::default'
