@@ -21,13 +21,10 @@ if node['platform_family'] == 'debian'
 end
 
 include_recipe 'node::default'
+include_recipe 'nodejs::default'
 include_recipe 'runit'
 include_recipe 'runit::default'
-include_recipe 'metachef'
-include_recipe 'redis'
-include_recipe 'redis::default'
-include_recipe 'redis::install_from_package'
-include_recipe 'redis::server'
+include_recipe 'redis-cookbook::default'
 include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
 
