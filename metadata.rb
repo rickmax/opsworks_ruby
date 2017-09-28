@@ -9,16 +9,16 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.7.0'
 chef_version '~> 12.0' if respond_to?(:chef_version)
 
-depends 'deployer'
 depends 'node'
-depends 'nodejs'
-depends 'chef_nginx'
-depends 'puma'
 depends 'logrotate'
 depends 'ruby-ng'
-depends 'elasticsearch', '>= 2.0.0'
+depends 'postgresql'
 depends 'redis'
+depends 'chef_nginx'
+depends 'puma'
+depends 'elasticsearch', '>= 2.0.0'
 depends 'sidekiq'
+depends 'deployer'
 
 supports 'amazon', '>= 2017.03'
 supports 'ubuntu', '>= 16.04'

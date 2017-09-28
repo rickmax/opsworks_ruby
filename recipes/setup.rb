@@ -7,11 +7,6 @@
 
 prepare_recipe
 
-include_recipe 'node::default'
-include_recipe 'redis::default'
-include_recipe 'elasticsearch::default'
-include_recipe 'sidekiq::default'
-
 # Monit and cleanup
 if node['platform_family'] == 'debian'
   execute 'mkdir -p /etc/monit/conf.d'
@@ -24,6 +19,12 @@ if node['platform_family'] == 'debian'
     action :purge
   end
 end
+
+include_recipe 'node::default'
+include_recipe 'redis::install_from_package'
+include_recipe 'redis::server'
+include_recipe 'elasticsearch::default'
+include_recipe 'sidekiq'
 
 # Ruby and bundler
 include_recipe 'deployer'
