@@ -21,6 +21,8 @@ if node['platform_family'] == 'debian'
 end
 
 include_recipe 'node::default'
+include_recipe 'redis'
+include_recipe 'redis::default'
 include_recipe 'redis::install_from_package'
 include_recipe 'redis::server'
 include_recipe 'elasticsearch::default'
