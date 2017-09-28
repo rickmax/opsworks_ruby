@@ -20,7 +20,6 @@ if node['platform_family'] == 'debian'
   end
 end
 
-include_recipe 'node'
 include_recipe 'runit'
 include_recipe 'runit::default'
 include_recipe 'redis-cookbook::default'

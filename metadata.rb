@@ -9,7 +9,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.7.0'
 chef_version '~> 12.0' if respond_to?(:chef_version)
 
-depends 'node'
 depends 'logrotate'
 depends 'ruby-ng'
 depends 'postgresql'
