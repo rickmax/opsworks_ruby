@@ -19,7 +19,7 @@ if node['platform_family'] == 'debian'
     action :purge
   end
 end
-
+include_recipe 'apt'
 include_recipe 'runit'
 include_recipe 'runit::default'
 include_recipe 'redisio::default'
