@@ -25,8 +25,6 @@ include_recipe 'runit::default'
 include_recipe 'redisio::default'
 include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
-
-node['nodejs']['install_method'] = 'package' # Not necessary because it's the default
 include_recipe "nodejs"
 
 # Ruby and bundler
