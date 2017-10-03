@@ -26,7 +26,7 @@ include_recipe 'redisio::default'
 include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
 include_recipe 'nodejs'
-include_recipe 'nodejs::install'
+include_recipe 'nodejs::nodejs_from_package'
 
 # Ruby and bundler
 include_recipe 'deployer'
