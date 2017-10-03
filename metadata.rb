@@ -18,6 +18,7 @@ depends 'chef_nginx'
 depends 'puma'
 depends 'elasticsearch', '>= 2.0.0'
 depends 'sidekiq'
+depends 'nodejs'
 depends 'deployer'
 
 supports 'amazon', '>= 2017.03'

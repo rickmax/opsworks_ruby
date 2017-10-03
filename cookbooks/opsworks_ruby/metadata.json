@@ -19,6 +19,7 @@
     "puma": ">= 0.0.0",
     "elasticsearch": ">= 2.0.0",
     "sidekiq": ">= 0.0.0",
+    "nodejs": ">= 0.0.0",
     "deployer": ">= 0.0.0"
   },
   "recommendations": {
