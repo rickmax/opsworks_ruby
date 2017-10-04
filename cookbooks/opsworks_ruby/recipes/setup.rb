@@ -19,13 +19,12 @@ if node['platform_family'] == 'debian'
     action :purge
   end
 end
-include_recipe 'apt'
+
 include_recipe 'runit'
 include_recipe 'runit::default'
 include_recipe 'redisio::default'
 include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
-include_recipe 'nodejs'
 
 # Ruby and bundler
 include_recipe 'deployer'
