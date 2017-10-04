@@ -1,6 +1,6 @@
 #
 # Author:: Julian Wilde (jules@jules.com.au)
-# Cookbook:: nodejs
+# Cookbook Name:: nodejs
 # Recipe:: install_from_binary
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

@@ -1,11 +1,11 @@
 #
 # Author:: Nathan L Smith (nlloyds@gmail.com)
 # Author:: Marius Ducea (marius@promethost.com)
-# Cookbook:: nodejs
+# Cookbook Name:: nodejs
 # Recipe:: package
 #
-# Copyright:: 2012-2017, Cramer Development, Inc.
-# Copyright:: 2013-2017, Opscale
+# Copyright 2012, Cramer Development, Inc.
+# Copyright 2013, Opscale
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

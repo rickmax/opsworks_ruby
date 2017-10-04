@@ -1,9 +1,9 @@
 #
 # Author:: Marius Ducea (marius@promethost.com)
-# Cookbook:: nodejs
+# Cookbook Name:: nodejs
 # Recipe:: default
 #
-# Copyright:: 2010-2017, Promet Solutions
+# Copyright 2010-2012, Promet Solutions
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
