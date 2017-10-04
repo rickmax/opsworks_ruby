@@ -1,6 +1,6 @@
 case node['platform_family']
 when 'debian'
-  package 'apt-transport-https'
+  include_recipe 'apt'
 
   apt_repository 'node.js' do
     uri node['nodejs']['repo']
@@ -9,10 +9,6 @@ when 'debian'
     keyserver node['nodejs']['keyserver']
     key node['nodejs']['key']
   end
-when 'rhel', 'amazon'
-  yum_repository 'node.js' do
-    description 'nodesource.com nodejs repository'
-    baseurl node['nodejs']['repo']
-    gpgkey node['nodejs']['key']
-  end
+when 'rhel'
+  include_recipe 'yum-epel'
 end
