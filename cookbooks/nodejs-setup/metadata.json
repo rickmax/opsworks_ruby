@@ -1,0 +1,42 @@
+{
+  "name": "nodejs-setup",
+  "description": "Installs/Configures nodejs-setup",
+  "long_description": "nodejs-setup Cookbook\n=====================\nA cookbook to install nodejs for debian os\n\nSupported os: debian, rhel, fedora\n\nRequirements\n------------\nNone.\n\nAttributes\n----------\nallow_version: 0.10, 0.12, 4.x, 5.x\n\n```json\n{\n  \"nodejs-setup\": {\n    \"version\": \"4.x\",\n    \"npm_packages\": \"async, underscore\"\n  }\n}\n```\n\n\nUsage\n-----\n#### nodejs-setup::default\nJust include `nodejs-setup` in your node's `run_list`:\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[nodejs-setup]\"\n  ]\n}\n```\n\nContributing\n------------\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write your change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request using Github\n\nLicense and Authors\n-------------------\nAuthors: Huytran\n",
+  "maintainer": "HuyTran",
+  "maintainer_email": "huy.tranquoc1989@gmail.com",
+  "license": "All rights reserved",
+  "platforms": {
+
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.1.8",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false
+}
