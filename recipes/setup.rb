@@ -27,7 +27,9 @@ include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
 include_recipe 'nvm'
 
+package 'node'
 package 'nodejs'
+package 'nodejs-legacy'
 
 # Ruby and bundler
 include_recipe 'deployer'
