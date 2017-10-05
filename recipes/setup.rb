@@ -34,6 +34,26 @@ execute "install_updates" do
   command "apt-get update"
 end
 
+node['nodejs']['install_method'] = 'package' # Not necessary because it's the default
+include_recipe "nodejs"
+# Or
+include_recipe "nodejs::nodejs_from_package"
+
+node['nodejs']['install_method'] = 'binary'
+include_recipe "nodejs"
+# Or
+include_recipe "nodejs::nodejs_from_binary"
+
+node['nodejs']['install_method'] = 'source'
+include_recipe "nodejs"
+# Or
+include_recipe "nodejs::nodejs_from_source"
+
+
+execute "install_updates" do
+  command "apt-get update"
+end
+
 execute "install_nodejs" do
   command "apt-get install nodejs-legacy"
 end

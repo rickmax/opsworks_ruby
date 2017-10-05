@@ -19,6 +19,7 @@ depends 'puma'
 depends 'elasticsearch', '>= 2.0.0'
 depends 'sidekiq'
 depends 'rbenv'
+depends	'nodejs'
 depends 'nvm'
 depends 'deployer'
 
