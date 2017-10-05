@@ -20,6 +20,8 @@ if node['platform_family'] == 'debian'
   end
 end
 
+include_recipe 'apt'
+include_recipe 'nodejs'
 include_recipe 'runit'
 include_recipe 'runit::default'
 include_recipe 'redisio::default'
