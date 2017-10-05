@@ -25,7 +25,7 @@ include_recipe 'runit::default'
 include_recipe 'redisio::default'
 include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
-include_recipe 'nodejs-setup'
+include_recipe 'nvm'
 # Ruby and bundler
 include_recipe 'deployer'
 
