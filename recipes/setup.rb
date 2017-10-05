@@ -27,9 +27,13 @@ include_recipe 'elasticsearch::default'
 include_recipe 'sidekiq'
 include_recipe 'nvm'
 
-package 'node'
-package 'nodejs'
-package 'nodejs-legacy'
+execute "install_updates" do
+  command "apt-get update"
+end
+
+execute "install_nodejs" do
+  command "apt-get install nodejs-legacy"
+end
 
 # Ruby and bundler
 include_recipe 'deployer'
