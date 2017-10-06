@@ -23,19 +23,13 @@ end
 include_recipe 'apt'
 include_recipe 'runit'
 include_recipe 'runit::default'
-include_recipe 'redisio::default'
-include_recipe 'elasticsearch::default'
+include_recipe 'redis'
+include_recipe 'elasticsearch'
 include_recipe 'sidekiq'
 include_recipe 'rbenv::default'
 include_recipe 'rbenv::ruby_build'
 include_recipe 'rbenv::rbenv_vars'
-include_recipe 'nvm'
 include_recipe 'nodejs'
-include_recipe 'services'
-
-execute 'sudo service redis start'
-
-execute 'sudo service elasticsearch start'
 
 # Ruby and bundler
 include_recipe 'deployer'
