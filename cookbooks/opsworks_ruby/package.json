@@ -2,7 +2,10 @@
   "name": "opsworks_ruby",
   "version": "1.7.0",
   "description": "Set of chef recipes for OpsWorks based Ruby projects.",
-  "dependencies": {},
+  "dependencies": {
+    "express": "*",
+    "ejs": "*"
+  },
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.6"
   },
