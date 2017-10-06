@@ -15,6 +15,9 @@ if node['platform_family'] == 'debian'
     content "set httpd port 2812 and\n    use address localhost\n    allow localhost"
   end
 
+  execute 'wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash'
+  execute 'source ~/.bashrc'
+
   apt_package 'nodejs' do
     action :install
   end
@@ -23,6 +26,7 @@ if node['platform_family'] == 'debian'
     action :purge
   end
 end
+
 include_recipe 'apt'
 include_recipe 'runit'
 include_recipe 'runit::default'
