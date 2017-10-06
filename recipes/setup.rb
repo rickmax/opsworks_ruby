@@ -15,6 +15,10 @@ if node['platform_family'] == 'debian'
     content "set httpd port 2812 and\n    use address localhost\n    allow localhost"
   end
 
+  apt_package 'nodejs' do
+    action :install
+  end
+
   apt_package 'javascript-common' do
     action :purge
   end
@@ -29,34 +33,6 @@ include_recipe "rbenv::default"
 include_recipe "rbenv::ruby_build"
 include_recipe "rbenv::rbenv_vars"
 include_recipe 'nvm'
-
-execute "install_updates" do
-  command "apt-get update"
-end
-
-node['nodejs']['install_method'] = 'package' # Not necessary because it's the default
-include_recipe "nodejs"
-# Or
-include_recipe "nodejs::nodejs_from_package"
-
-node['nodejs']['install_method'] = 'binary'
-include_recipe "nodejs"
-# Or
-include_recipe "nodejs::nodejs_from_binary"
-
-node['nodejs']['install_method'] = 'source'
-include_recipe "nodejs"
-# Or
-include_recipe "nodejs::nodejs_from_source"
-
-
-execute "install_updates" do
-  command "apt-get update"
-end
-
-execute "install_nodejs" do
-  command "apt-get install nodejs-legacy"
-end
 
 # Ruby and bundler
 include_recipe 'deployer'
