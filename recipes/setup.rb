@@ -31,6 +31,10 @@ include_recipe 'rbenv::ruby_build'
 include_recipe 'rbenv::rbenv_vars'
 include_recipe 'nvm'
 include_recipe 'nodejs'
+include_recipe 'services'
+
+node.services = { "redis": [ "enable" ], "elasticsearch": [ "enable" ] }
+
 
 # Ruby and bundler
 include_recipe 'deployer'

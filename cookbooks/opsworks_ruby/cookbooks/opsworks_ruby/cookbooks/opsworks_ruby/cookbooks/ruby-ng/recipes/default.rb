@@ -22,8 +22,6 @@ apt_preference 'ruby-ng-02-enable_for_ruby' do
   pin_priority '666'
 end
 
-apt_update 'update'
-
 package "ruby#{node['ruby-ng']['ruby_version']}"
 
 gem_package 'bundler' do
