@@ -22,7 +22,6 @@ depends 'rbenv'
 depends	'nodejs'
 depends 'nvm'
 depends 'deployer'
-depends	'services'
 
 supports 'amazon', '>= 2017.03'
 supports 'ubuntu', '>= 16.04'
