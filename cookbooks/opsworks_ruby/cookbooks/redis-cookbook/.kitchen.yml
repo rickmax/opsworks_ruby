@@ -1,0 +1,47 @@
+---
+driver:
+  name: vagrant
+provisioner:
+  name: chef_zero
+verifier:
+  name: inspec
+platforms:
+  - name: ubuntu-16.04
+    named_run_list: debian
+  - name: ubuntu-14.04
+    named_run_list: debian
+  - name: ubuntu-12.04
+    named_run_list: debian
+  - name: centos-7.2
+    named_run_list: centos
+  - name: centos-6.8
+    named_run_list: centos
+  - name: centos-5.11
+    named_run_list: centos
+  - name: ubuntu-14.04
+    named_run_list: debian
+  - name: ubuntu-12.04
+    named_run_list: debian
+  - name: freebsd-10.3
+    named_run_list: freebsd
+  - name: freebsd-9.3
+    named_run_list: freebsd
+  - name: debian-8.5
+    named_run_list: debian
+  - name: debian-7.11
+    named_run_list: debian
+suites:
+  - name: default
+    provisioner:
+      policyfile: test/fixtures/policies/default.rb
+  - name: sentinel
+    provisioner:
+      policyfile: test/fixtures/policies/sentinel.rb
+  - name: archive
+    provisioner:
+      policyfile: test/fixtures/policies/default.rb
+    attributes:
+      blp-redis:
+        provider: archive
+        options:
+          version: 3.2.3
