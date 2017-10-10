@@ -34,6 +34,7 @@ include_recipe 'rbenv::default'
 include_recipe 'rbenv::ruby_build'
 include_recipe 'rbenv::rbenv_vars'
 include_recipe 'nodejs'
+include_recipe 'postgresql'
 
 # Ruby and bundler
 include_recipe 'deployer'
