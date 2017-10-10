@@ -20,6 +20,7 @@ depends 'sidekiq'
 depends 'rbenv'
 depends	'nodejs'
 depends 'deployer'
+depends 'aws'
 
 supports 'amazon', '>= 2017.03'
 supports 'ubuntu', '>= 16.04'
