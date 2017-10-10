@@ -23,7 +23,11 @@ end
 include_recipe 'apt'
 include_recipe 'runit'
 include_recipe 'runit::default'
-include_recipe 'redis-cookbook'
+
+package 'redis-server'
+execute 'apt-get install libsqlite3-dev -y'
+package 'sqlite'
+
 include_recipe 'elasticsearch'
 include_recipe 'sidekiq'
 include_recipe 'rbenv::default'
