@@ -37,10 +37,10 @@ include_recipe 'nodejs'
 include_recipe 'postgresql'
 include_recipe 'postgresql::server'
 include_recipe 'aws'
-include_recipe 'puma'
 
 # Ruby and bundler
 include_recipe 'deployer'
+include_recipe 'puma'
 
 if node['platform_family'] == 'debian'
   include_recipe 'ruby-ng::dev'
