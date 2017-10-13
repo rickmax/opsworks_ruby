@@ -37,6 +37,7 @@ include_recipe 'nodejs'
 include_recipe 'postgresql'
 include_recipe 'postgresql::server'
 include_recipe 'aws'
+include_recipe 'puma'
 
 # Ruby and bundler
 include_recipe 'deployer'
