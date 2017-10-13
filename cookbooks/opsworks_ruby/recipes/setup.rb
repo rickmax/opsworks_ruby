@@ -40,7 +40,6 @@ include_recipe 'aws'
 
 # Ruby and bundler
 include_recipe 'deployer'
-include_recipe 'puma'
 
 if node['platform_family'] == 'debian'
   include_recipe 'ruby-ng::dev'
