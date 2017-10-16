@@ -15,7 +15,6 @@
     "postgresql": ">= 0.0.0",
     "runit": ">= 0.0.0",
     "chef_nginx": ">= 0.0.0",
-    "puma": ">= 0.0.0",
     "elasticsearch": ">= 2.0.0",
     "sidekiq": ">= 0.0.0",
     "rbenv": ">= 0.0.0",
