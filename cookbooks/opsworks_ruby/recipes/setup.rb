@@ -37,6 +37,8 @@ include_recipe 'nodejs'
 include_recipe 'postgresql'
 include_recipe 'postgresql::server'
 include_recipe 'aws'
+
+execute  'npm install yarn -g'
 # Ruby and bundler
 include_recipe 'deployer'
 
