@@ -81,7 +81,7 @@ default['defaults']['webserver']['ssl_port'] = 443
 default['defaults']['webserver']['ssl_for_legacy_browsers'] = false
 default['defaults']['webserver']['extra_config'] = ''
 default['defaults']['webserver']['extra_config_ssl'] = ''
-default['defaults']['webserver']['keepalive_timeout'] = '15'
+default['defaults']['webserver']['keepalive_timeout'] = '600000'
 default['defaults']['webserver']['log_level'] = 'info'
 default['defaults']['webserver']['remove_default_sites'] = %w[
   default default.conf 000-default 000-default.conf default-ssl default-ssl.conf
@@ -102,8 +102,8 @@ default['nginx']['client_body_timeout'] = '12'
 default['nginx']['client_header_timeout'] = '12'
 default['nginx']['client_max_body_size'] = '10m'
 default['nginx']['log_dir'] = '/var/log/nginx'
-default['nginx']['proxy_read_timeout'] = '60'
-default['nginx']['proxy_send_timeout'] = '60'
+default['nginx']['proxy_read_timeout'] = '600000'
+default['nginx']['proxy_send_timeout'] = '600000'
 default['nginx']['send_timeout'] = '10'
 default['nginx']['enable_upgrade_method'] = false
 
