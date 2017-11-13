@@ -47,7 +47,7 @@ default['defaults']['appserver']['adapter'] = 'puma'
 default['defaults']['appserver']['application_yml'] = false
 default['defaults']['appserver']['dot_env'] = false
 default['defaults']['appserver']['preload_app'] = true
-default['defaults']['appserver']['timeout'] = 60
+default['defaults']['appserver']['timeout'] = 600000
 default['defaults']['appserver']['worker_processes'] = 4
 
 ## puma
