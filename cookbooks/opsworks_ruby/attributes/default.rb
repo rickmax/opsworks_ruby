@@ -33,7 +33,7 @@ default['defaults']['global']['logrotate_options'] = %w[
 # database
 ## common
 
-default['defaults']['database']['adapter'] = 'postgresql'
+default['defaults']['dbnddash']['adapter'] = 'postgresql'
 
 # scm
 ## common
