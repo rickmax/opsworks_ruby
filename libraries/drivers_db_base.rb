@@ -7,7 +7,7 @@ module Drivers
       include Drivers::Dsl::Output
       include Drivers::Dsl::Packages
 
-      defaults encoding: 'utf8', host: 'localhost', reconnect: true
+      defaults encoding: 'utf8', host: 'localhost', reconnect: true, pool: 50, timeout: 600000
 
       def self.driver_type
         'database'
